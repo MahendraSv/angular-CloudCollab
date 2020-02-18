@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Products ( {{products.length}} )
+  </div>
+  <div class="panel-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td>
+            <button class="btn btn-danger" (click)="toggleImages()">Show Images</button>
+          </td>
+          <td>Code</td>
+          <td>Name</td>
+          <td>Description</td>
+          <td>Price</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>
+            <img src={{product.imageUrl}} width="50" *ngIf="showImages">
+          </td>
+          <td>{{product.productCode}}</td>
+          <td>{{product.productName | uppercase}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price | currency:'Rs. '}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

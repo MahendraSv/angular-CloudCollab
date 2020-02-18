@@ -1,0 +1,19 @@
+<h2>Todo Application</h2>
+
+Archive
+<div>
+Total: {{todos.length}}
+<br/>
+Completed: {{getCompletedTodosCount()}}
+<br/>
+Pending: {{todos.length - getCompletedTodosCount()}}
+</div>
+
+<input type="text" [(ngModel)]="newTodoText">
+<button class="btn btn-success" (click)="addTodo()">Add</button>
+
+<ul>
+  <li *ngFor="let todo1 of todos;let i=index">
+    <app-todo-item [todoInput]="todo1" [index]="i" (delTodo)="deleteTodo($event)" ></app-todo-item>
+  </li>
+</ul>
