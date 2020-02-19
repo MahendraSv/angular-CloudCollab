@@ -20,7 +20,9 @@
           <td>
             <img src={{product.imageUrl}} width="50" *ngIf="showImages">
           </td>
-          <td>{{product.productCode}}</td>
+          <td>
+            <a href="product/{{product.productId}}">{{product.productCode}}</a>
+          </td>
           <td>{{product.productName | uppercase}}</td>
           <td>{{product.description}}</td>
           <td>{{product.price | currency:'Rs. '}}</td>

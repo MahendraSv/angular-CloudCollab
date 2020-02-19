@@ -87,4 +87,10 @@ export class ProductService {
       }
     ];
   }
+
+  getProduct(id: number) {
+    let ps = this.getProducts();
+    let found = ps.find(x => x.productId === id);
+    return found;
+  }
 }

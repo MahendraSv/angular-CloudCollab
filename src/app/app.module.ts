@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     TodoComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
