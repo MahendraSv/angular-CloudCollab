@@ -9,6 +9,8 @@ import { TodoComponent } from './todo/todo.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
+import { ExampleModule } from './example/example.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
