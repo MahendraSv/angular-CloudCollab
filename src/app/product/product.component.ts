@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Subscription } from 'rxjs';
 import { ProductService } from './../services/product.service';
 
 @Component({
@@ -14,10 +14,13 @@ export class ProductComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.sub = this.productService.getProducts().subscribe(
+      products => this.products = products
+    );
   }
 
   products = [];
+  sub: Subscription;
 
   showImages = false;
 

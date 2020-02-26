@@ -8,8 +8,11 @@ import { ProductComponent } from './product/product.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ExampleModule } from './example/example.module';
+import { AppData } from './data/app-data';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { ExampleModule } from './example/example.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ExampleModule
+    ExampleModule,
+    InMemoryWebApiModule.forRoot(AppData, { delay: 1000 }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
